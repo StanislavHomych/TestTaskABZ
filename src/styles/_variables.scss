@@ -28,3 +28,15 @@ $font-sizes: (
 @function size($font-size) {
     @return map-get($font-sizes, $font-size )
 }
+
+$screen-sizes: (
+    "x-large" : 1170px,
+    "large": 1024px,
+    "medium": 768px,
+    "medium-s": 500px,
+    "small": 360px
+);
+
+@function screen-size($screen-size) {
+    @return map-get($screen-sizes, $screen-size )
+}

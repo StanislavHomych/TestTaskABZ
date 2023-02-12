@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './PhotoUpload.scss';
 import { useDispatch } from 'react-redux';
 import { validateFileField } from '../../redux/slices/usersSlice';
@@ -45,17 +45,32 @@ const PhotoUpload = ({ adduserPic }) => {
                 <label className='uploadBtn' htmlFor="file">Upload</label>
                 <div className='fileNameField'>
                     {
-                        image ? (<h1 className='loaded'>{image.name}</h1>) : !bigFileError && !smallImgError && (<p className='notLoaded'>Upload your photo</p>)
+                        image ?
+                            (<h1 className='loaded'>{image.name}</h1>) :
+                            !bigFileError && !smallImgError &&
+                            (<p className='notLoaded'>Upload your photo</p>)
                     }
                     {
-                        bigFileError ? (<h1 className='loadingError'>Image to large (max 5MB)</h1>) : null
+                        bigFileError ?
+                            (<h1 className='loadingError'>Image to large (max 5MB)</h1>) :
+                            null
                     }
                     {
-                        smallImgError ? (<h1 className='loadingError'>Image to small</h1>) : null
+                        smallImgError ?
+                            (<h1 className='loadingError'>Image to small</h1>) :
+                            null
                     }
                 </div>
             </div>
-            <input required className='profilePicField' type='file' name='file' id='file' accept="image/jpeg" onChange={(e) => { handleImage(e) }}></input>
+            <input
+                required
+                className='profilePicField'
+                type='file'
+                name='file'
+                id='file'
+                accept="image/jpeg"
+                onChange={(e) => { handleImage(e) }}>
+            </input>
         </div>
     )
 }

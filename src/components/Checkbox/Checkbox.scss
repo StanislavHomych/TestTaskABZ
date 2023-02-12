@@ -4,16 +4,24 @@
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  margin: 0px 0 0 2px;
+
+  &-heading{
+    margin-bottom: -3px;
+  }
 }
 
+
+
 .radioLabel {
-    display: block;
-    
+    display: flex;
+    margin: 16px 0 0 0px;
+
     &:before {
-      margin: 14px 10px -1px 0px;
-      width: 12px;
-      height: 12px;
-      border: solid 2px $background-color;
+      margin-right: 12px;
+      width: 18px;
+      height: 18px;
+      border: solid 4px $background-color;
       border-radius: 12px;
       box-shadow: 0 0 0 1px $form-border_light;
       display: inline-block;

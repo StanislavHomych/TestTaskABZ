@@ -2,7 +2,7 @@
 @import '../../styles/variables';
 
 .profilePicField {
-    visibility: hidden;
+    display: none;
 }
 
 .wrapper {
@@ -24,12 +24,16 @@
     display: flex;
     align-items: center;
     font-family: $nunito-family;
-    width: 245px;
+    width: 300px;
     padding: 0 16px 0 16px;
     border: 1px solid $form-border_light;
     border-left: none;
     border-radius: 0 4px 4px 0;
     height: 54px;
+
+    @media screen and (max-width: screen-size('medium-s')) {
+        width: 245px;
+      }
 }
 
 .loaded{

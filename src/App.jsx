@@ -4,7 +4,6 @@ import Main from './pages/Main/Main';
 import Header from './components/Header/Header';
 import Users from './pages/Users/Users';
 import Registration from './pages/Registration/Registration';
-
 function App() {
 
   return (

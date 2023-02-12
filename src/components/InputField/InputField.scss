@@ -1,16 +1,19 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
 
-
-
 .inputText{
     font-family: $nunito-family;
     font-size: size('regular');
     border: 1px solid $form-border_light;
     height: 54px;
-    width: 328px;
+    width: 380px;
     border-radius: 4px;
     padding-left: 16px;
+    background-color: $background-color;
+
+    @media screen and (max-width: screen-size('medium-s')) {
+      width: 328px;
+    }
 
     &-invalid{
         @extend .inputText;
@@ -32,17 +35,16 @@
         border: 1px solid $error-color;
     }
 
-
     &-hint{
         font-size: size('xs');
         color: $font-color_darkgray;
-        margin-left: 16px;
+        margin-left: 15px;
+        margin-top: -2px;
     }
 
     &-hint_error{
         @extend .inputText-hint;
         color: $error-color;
-        position: absolute;
+        position: relative;
     }
-
 }

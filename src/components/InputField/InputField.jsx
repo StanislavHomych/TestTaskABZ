@@ -1,24 +1,30 @@
-import React from 'react';
 import './InputField.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import { validateEmailField, validateNameField, validatePhoneField } from '../../redux/slices/usersSlice';
+import { useDispatch } from 'react-redux';
+import {
+  validateEmailField,
+  validateNameField,
+  validatePhoneField
+} from '../../redux/slices/usersSlice';
 import { useState } from 'react';
 
-const InputField = ({ children, showDefaultHint, setValue, inputValue, regExpression, typeOfInput, indentifier }) => {
-  // const data = useSelector((state) => { return state.usersSlice });
+const InputField = ({ children,
+  showDefaultHint,
+  setValue,
+  inputValue,
+  regExpression,
+  typeOfInput,
+  indentifier }) => {
   const dispatch = useDispatch();
   const [isValidForm, setIsValidForm] = useState(true);
   console.log(isValidForm)
 
   const handleChnge = (e) => {
     e.preventDefault()
-
     const formElement = e.target;
     const isValid = formElement.checkValidity();
     setIsValidForm(isValid);
 
     dispatch(setValue(e.target.value))
-
 
     if (isValid) {
       switch (e.target.id) {
@@ -48,9 +54,21 @@ const InputField = ({ children, showDefaultHint, setValue, inputValue, regExpres
 
   return (
     <div>
-      <input className={isValidForm ? 'inputText' : 'inputText-invalid'} placeholder={children} type={typeOfInput} name='text' id={indentifier} value={inputValue} pattern={regExpression} onChange={(e) => { handleChnge(e) }}></input>
+      <input
+        className={isValidForm ? 'inputText' : 'inputText-invalid'}
+        placeholder={children}
+        type={typeOfInput}
+        name='text'
+        id={indentifier}
+        value={inputValue}
+        pattern={regExpression}
+        onChange={(e) => { handleChnge(e) }}>
+      </input>
       {
-        isValidForm ?  showDefaultHint && (<p className='inputText-hint'>+38 (XXX) XXX - XX - XX</p>) : showDefaultHint && <p className='inputText-hint_error'>Wrong format</p> || <p className='inputText-hint_error'>Wrong format</p>
+        isValidForm ?
+          showDefaultHint && (<p className='inputText-hint'>+38(XXX)XXX-XX-XX</p>) :
+          showDefaultHint && <p className='inputText-hint_error'>Wrong format</p> ||
+          <p className='inputText-hint_error'>Wrong format</p>
       }
     </div>
 

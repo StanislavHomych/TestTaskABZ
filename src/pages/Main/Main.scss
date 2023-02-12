@@ -1,32 +1,47 @@
 @import '../../styles/variables';
 
 .mainPageWrapper {
-    height: calc(100vh - 60px);
+    height: 650px;
     display: flex;
+    max-width: $max-width_main;
     flex-direction: column;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)), url('./../../assets/background.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position:center ;
-}
+    background-position: 48% 81%;
 
-.mainPageContent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 380px;
-
-    &-heading{
-        margin-bottom: 21px;
-        color: $font-color_secondary;
+    @media screen and (max-width: screen-size('medium')) {
+        height: 500px;
     }
 
-    &-info{
-        margin-bottom: 32px;
-        color: $font-color_secondary;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 380px;
+        text-align: center;
+
+        @media screen and (max-width: screen-size('medium-s')) {
+            width: 328px;
+        }
+
+        &_heading {
+            margin-bottom: 21px;
+            color: $font-color_secondary;
+
+            @media screen and (max-width: screen-size('medium-s')) {
+                margin-top: -32px;
+            }
+        }
+
+        &_info {
+            margin-bottom: 32px;
+            color: $font-color_secondary;
+        }
     }
 }
