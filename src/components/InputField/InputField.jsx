@@ -3,28 +3,29 @@ import { useDispatch } from 'react-redux';
 import {
   validateEmailField,
   validateNameField,
-  validatePhoneField
+  validatePhoneField,
 } from '../../redux/slices/usersSlice';
 import { useState } from 'react';
 
-const InputField = ({ children,
+const InputField = ({
+  children,
   showDefaultHint,
   setValue,
   inputValue,
   regExpression,
   typeOfInput,
-  indentifier }) => {
+  indentifier,
+}) => {
   const dispatch = useDispatch();
   const [isValidForm, setIsValidForm] = useState(true);
-  console.log(isValidForm)
 
   const handleChnge = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const formElement = e.target;
     const isValid = formElement.checkValidity();
     setIsValidForm(isValid);
 
-    dispatch(setValue(e.target.value))
+    dispatch(setValue(e.target.value));
 
     if (isValid) {
       switch (e.target.id) {
@@ -50,7 +51,7 @@ const InputField = ({ children,
           dispatch(validatePhoneField(false));
       }
     }
-  }
+  };
 
   return (
     <div>
@@ -62,17 +63,17 @@ const InputField = ({ children,
         id={indentifier}
         value={inputValue}
         pattern={regExpression}
-        onChange={(e) => { handleChnge(e) }}>
-      </input>
-      {
-        isValidForm ?
-          showDefaultHint && (<p className='inputText-hint'>+38(XXX)XXX-XX-XX</p>) :
-          showDefaultHint && <p className='inputText-hint_error'>Wrong format</p> ||
-          <p className='inputText-hint_error'>Wrong format</p>
-      }
+        onChange={(e) => {
+          handleChnge(e);
+        }}
+      ></input>
+      {isValidForm
+        ? showDefaultHint && <p className='inputText-hint'>+38(XXX)XXX-XX-XX</p>
+        : (showDefaultHint && <p className='inputText-hint_errorNum'>Wrong format</p>) || (
+            <p className='inputText-hint_error'>Wrong format</p>
+          )}
     </div>
+  );
+};
 
-  )
-}
-
-export default InputField
+export default InputField;

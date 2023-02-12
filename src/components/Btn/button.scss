@@ -1,10 +1,9 @@
 @import '.././../styles/mixins';
 
-
-.btn{
-    @include buttonMain(100px);
+.btn {
+  @include buttonMain(100px);
 }
 
-.btn-large{
-    @include buttonMain(120px);
+.btn-large {
+  @include buttonMain(120px);
 }

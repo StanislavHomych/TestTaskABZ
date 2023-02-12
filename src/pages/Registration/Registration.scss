@@ -1,40 +1,40 @@
 @import '../../styles/variables';
 
-.registrationWrapper{
+.registrationWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: $max-width_main;
+  padding-bottom: 100px;
+  margin: 0 auto;
+
+  @media screen and (max-width: screen-size('medium-s')) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &-heading {
+    margin-top: 140px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &-fields {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    max-width: $max-width_main;
-    padding-bottom: 100px;
-    margin: 0 auto;
-
-    @media screen and (max-width: screen-size('medium-s')) {
-        padding-left: 16px;
-        padding-right: 16px;
+    &_inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 20px;
     }
-
-    &-heading{
-        margin-top: 140px;
-        margin-bottom: 50px;
-        text-align: center;
-    }
-
-    &-fields{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        &_inputs{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 50px;
-            margin-bottom: 20px;
-        }
-    }
+  }
 }
 
-.registrationSuccess{
-    @extend .registrationWrapper;
-    padding-top: 100px;
+.registrationSuccess {
+  @extend .registrationWrapper;
+  padding-top: 100px;
 }

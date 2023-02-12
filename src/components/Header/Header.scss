@@ -1,40 +1,36 @@
 @import '../../styles/variables';
 
 .headerWrapper {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  margin: 0 auto;
+
+  &-inner {
     display: flex;
-    width: 100%;
-    background: #fff;
+    align-items: center;
+    justify-content: space-between;
     margin: 0 auto;
+    height: 60px;
+    background: #fff;
+    width: 1170px;
+    max-width: $max-width_main;
 
-
-    &-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0 auto;
-        height: 60px;
-        background: #fff;
-        width: 1170px;
-        max-width: $max-width_main;
-
-        @media screen and (max-width: screen-size('x-large')) {
-            padding:0 60px;
-
-        }
-
-        @media screen and (max-width: screen-size('medium')) {
-            padding: 0 32px;
-        }
-
-        @media screen and (max-width: screen-size('medium')) {
-            padding: 16px;
-        }
+    @media screen and (max-width: screen-size('x-large')) {
+      padding: 0 60px;
     }
 
-    
+    @media screen and (max-width: screen-size('medium')) {
+      padding: 0 32px;
+    }
+
+    @media screen and (max-width: screen-size('medium')) {
+      padding: 16px;
+    }
+  }
 }
 
 .btnsHeader {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }

@@ -2,49 +2,49 @@
 @import '../../styles/variables';
 
 .profilePicField {
-    display: none;
+  display: none;
 }
 
 .wrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .uploadBtn {
-    font-family: $nunito-family;
-    border-radius: 4px 0px 0px 4px;
-    width: 83px;
-    height: 54px;
-    border: 1px solid black;
-    text-align: center;
-    line-height: 54px;
+  font-family: $nunito-family;
+  border-radius: 4px 0px 0px 4px;
+  width: 83px;
+  height: 54px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 54px;
 }
 
-.fileNameField{
-    display: flex;
-    align-items: center;
-    font-family: $nunito-family;
-    width: 300px;
-    padding: 0 16px 0 16px;
-    border: 1px solid $form-border_light;
-    border-left: none;
-    border-radius: 0 4px 4px 0;
-    height: 54px;
+.fileNameField {
+  display: flex;
+  align-items: center;
+  font-family: $nunito-family;
+  width: 300px;
+  padding: 0 16px 0 16px;
+  border: 1px solid $form-border_light;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  height: 54px;
 
-    @media screen and (max-width: screen-size('medium-s')) {
-        width: 245px;
-      }
+  @media screen and (max-width: screen-size('medium-s')) {
+    width: 245px;
+  }
 }
 
-.loaded{
-    @include fontPotoField($font-color_loaded);
-    @include textOverflow;
+.loaded {
+  @include fontPotoField($font-color_loaded);
+  @include textOverflow;
 }
 
-.notLoaded{
-    @include fontPotoField($font-color_notloaded);
+.notLoaded {
+  @include fontPotoField($font-color_notloaded);
 }
 
-.loadingError{
-    @include fontPotoField($error-color);
+.loadingError {
+  @include fontPotoField($error-color);
 }

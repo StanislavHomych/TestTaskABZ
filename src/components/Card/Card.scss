@@ -1,46 +1,45 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
 
-
 .wrapperCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 254px;
-    box-sizing: border-box;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: white;
-    min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 254px;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  min-width: 0;
 }
 
 .userPic {
-    width: 70px;
-    height: 70px;
-    clip-path: circle();
+  width: 70px;
+  height: 70px;
+  clip-path: circle();
 }
 
-.infoWrap{
-    width: 100%;
+.infoWrap {
+  width: 100%;
 }
 
 .userName {
-    margin: 20px 0px 20px 0;
-    cursor: pointer;
-    @include textOverflow;
+  margin: 20px 0px 20px 0;
+  cursor: pointer;
+  @include textOverflow;
 }
 
 .userPosition {
-    cursor: pointer;
-    @include textOverflow;
+  cursor: pointer;
+  @include textOverflow;
 }
 
 .userMail {
-    cursor: pointer;
-    @include textOverflow;
+  cursor: pointer;
+  @include textOverflow;
 }
 
 .userPhoneNum {
-    cursor: pointer;
-    @include textOverflow;
+  cursor: pointer;
+  @include textOverflow;
 }

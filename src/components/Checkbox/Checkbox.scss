@@ -1,37 +1,35 @@
 @import '../../styles/variables';
 
-.radioWrapper{
+.radioWrapper {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
   margin: 0px 0 0 2px;
 
-  &-heading{
+  &-heading {
     margin-bottom: -3px;
   }
 }
 
-
-
 .radioLabel {
-    display: flex;
-    margin: 16px 0 0 0px;
+  display: flex;
+  margin: 16px 0 0 0px;
 
-    &:before {
-      margin-right: 12px;
-      width: 18px;
-      height: 18px;
-      border: solid 4px $background-color;
-      border-radius: 12px;
-      box-shadow: 0 0 0 1px $form-border_light;
-      display: inline-block;
-      content: "";
-    }
+  &:before {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    border: solid 4px $background-color;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px $form-border_light;
+    display: inline-block;
+    content: '';
   }
-  .radioInput {
-    display: none;
-    &:checked + label:before {
-      background: $secondary-color;
-      box-shadow: 0 0 0 1px $secondary-color;
-    }
+}
+.radioInput {
+  display: none;
+  &:checked + label:before {
+    background: $secondary-color;
+    box-shadow: 0 0 0 1px $secondary-color;
   }
+}
