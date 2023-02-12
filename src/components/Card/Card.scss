@@ -1,0 +1,50 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+
+.wrapperCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 282px;
+    height: 254px;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.userPic {
+    width: 70px;
+    height: 70px;
+    clip-path: circle();
+}
+
+.infoWrap{
+    width: 100%;
+}
+
+.userName {
+    margin: 20px 0px 20px 0;
+    width: 100%;
+    cursor: pointer;
+    @include textOverflow;
+}
+
+.userPosition {
+    width: 100%;
+    cursor: pointer;
+    @include textOverflow;
+}
+
+.userMail {
+    width: 100%;
+    cursor: pointer;
+    @include textOverflow;
+}
+
+.userPhoneNum {
+    width: 100%;
+    cursor: pointer;
+    @include textOverflow;
+}

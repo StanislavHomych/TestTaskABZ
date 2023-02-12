@@ -1,0 +1,30 @@
+$primary-color :#F4E041;
+$secondary-color: #00BDD3;
+$background-color: #F8F8F8;
+$font-color_main: #000;
+$font-color_secondary: #fff;
+$font-color_darkgray: #7e7e7e;
+
+$btn-hover: #FFE302;
+$btn-disabled: #B4B4B4;
+
+$form-border_light: #D0CFCF;
+$font-color_loaded: #000;
+$font-color_notloaded: #7e7e7e;
+
+$error-color: #CB3D40;
+
+$max-width_main: 1170px;
+
+
+$nunito-family: 'Nunito', sans-serif;
+
+$font-sizes: (
+    "xl": 40px,
+    "regular": 16px,
+    "xs": 14px
+);
+
+@function size($font-size) {
+    @return map-get($font-sizes, $font-size )
+}

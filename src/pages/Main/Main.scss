@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.mainPageWrapper {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url('./../../assets/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center ;
+}
+
+.mainPageContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+
+    &-heading{
+        margin-bottom: 21px;
+        color: $font-color_secondary;
+    }
+
+    &-info{
+        margin-bottom: 32px;
+        color: $font-color_secondary;
+    }
+}

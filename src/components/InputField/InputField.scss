@@ -1,0 +1,48 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+
+
+.inputText{
+    font-family: $nunito-family;
+    font-size: size('regular');
+    border: 1px solid $form-border_light;
+    height: 54px;
+    width: 328px;
+    border-radius: 4px;
+    padding-left: 16px;
+
+    &-invalid{
+        @extend .inputText;
+        border: 1px solid $error-color;
+    }
+
+    &::placeholder{
+        font-family: $nunito-family;
+        font-size: size('regular');
+    }
+
+    &:focus{
+        outline: none !important;
+        border: 1px solid $form-border_light;
+    }
+
+    &:focus:invalid{
+        outline: none !important;
+        border: 1px solid $error-color;
+    }
+
+
+    &-hint{
+        font-size: size('xs');
+        color: $font-color_darkgray;
+        margin-left: 16px;
+    }
+
+    &-hint_error{
+        @extend .inputText-hint;
+        color: $error-color;
+        position: absolute;
+    }
+
+}
