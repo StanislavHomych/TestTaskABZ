@@ -17,7 +17,6 @@ const initialState = {
     name: '',
     email: '',
     phone: '',
-    profilePic: {},
     positionId: 0,
   },
 };

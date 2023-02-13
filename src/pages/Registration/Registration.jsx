@@ -20,7 +20,12 @@ const Registration = () => {
   const user = useSelector((state) => {
     return state.usersSlice;
   });
+
+  const registrationToken = useSelector((state) => {
+    return state.tokenSlice.token;
+  });
   const [userPic, setUserPic] = useState({});
+  console.log(registrationToken)
 
   const adduserPic = (file) => {
     setUserPic(file);
@@ -38,10 +43,11 @@ const Registration = () => {
     fetch('https://frontend-test-assignment-api.abz.agency/api/v1/users', {
       method: 'POST',
       body: formData,
-      headers: { Token: user.token },
+      headers: { Token: registrationToken },
     }).then((response) => {
       dispatch(setUserRegisteredSuccess(response.status));
       dispatch(setUserPostLoading(false));
+      console.log(response.data)
     });
   };
 
