@@ -10,7 +10,7 @@ const Header = () => {
     <div className='headerWrapper'>
       <div className='headerWrapper-inner'>
         <div className='logoWrapper'>
-          <img src={logo} alt='' />
+          <img src={logo} alt='logo' />
         </div>
         <div className='btnsHeader'>
           <Link to='users' spy={true} smooth={true} offset={50} duration={500}>
